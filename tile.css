@@ -1,0 +1,640 @@
+body {
+   background-color: #34495e;
+}
+
+* {
+    box-sizing: border-box;
+	border:0;
+	margin: 0em;
+	padding : 0em;
+} 
+
+a {
+	text-decoration: none;	
+}
+
+.hidden {
+	display: none;
+}
+
+.speaker polygon{
+	stroke-width: 3;
+    stroke-linejoin: round;
+    stroke: #808600;	
+	fill :#004A7F;
+}
+
+.speaker text{
+	fill: green;
+}
+
+@keyframes sound {
+  from { opacity: 0;  }
+  to       { opacity: 1; }
+} 
+
+/* track-unknown */
+.track-unknown .music1{	
+	display: inline;
+}
+
+.track-unknown  .speaker{	
+	display: none;
+}
+
+.track-unknown .cover{	
+	display: none;
+}
+
+/* track-playing */
+
+.track-playing .music1{	
+	display: none;
+}
+
+.track-playing  .speaker{		
+	display: inline;
+}
+
+.track-playing  .speaker path:nth-child(1){
+animation: sound 1s ease-in-out 0s infinite;
+}
+
+.track-playing  .speaker path:nth-child(2){
+animation: sound 1s ease-in-out 0.3s infinite;
+}
+
+.track-playing  .speaker path:nth-child(3){
+animation: sound 1s ease-in-out 0.6s infinite;
+}
+
+.track-playing .cover{
+	display: none;
+}
+
+/* track-previousplaying */
+.track-previousplaying .music1{	
+	display: none;
+}
+
+.track-previousplaying  .speaker{		
+	display: inline;
+}
+
+.track-previousplaying .cover{
+	display: none;
+}
+
+.track-previousplaying  .speaker path{
+ opacity: 0.5;
+}
+
+.track-previousplaying  .speaker polygon {
+ opacity: 0.5;
+}
+
+.track-found .music1{	
+	display: none;
+}
+
+.track-found  .speaker{		
+	display: none;
+}
+
+.track-found .cover{
+	display: inline;
+}
+
+.cover img{
+	width:100%;
+	height:100%;
+}
+
+#center {
+	position: absolute;
+	left:50vw;
+	top: 0vh;
+	height: 1px;
+	width: 1px;
+}
+
+@media all and  (orientation : landscape) {
+
+#menu {
+	position: absolute;
+	left:50vw;
+	top: 8vh;
+	height: 1vh;
+	width: 1vh;
+}
+
+div.menuitem{
+	position: inherit;
+	left: -84vh;
+	width: 20vh;
+}
+
+#goback {
+	top: 11vh;
+	height: 20vh;
+}
+
+#score {
+	top:   32vh;
+	height: 20vh;
+}
+
+#help {
+    top: 54vh;
+	height: 20vh;
+}
+	
+#select {
+    position: absolute;
+	top: 4vh;
+	left: 0vh;
+	height: 1px;
+	width: 1px;	
+}
+
+#title_select {
+	position: absolute;
+	top: 0vh;
+	left: -40vh;
+	width: 80vh;
+	height: 20vh;
+}
+
+#theme {
+	position: absolute;
+	top: 20vh;
+	left: -40vh;
+	height: 1px;
+	width: 1px;	
+}
+
+#title_theme {
+	position: absolute;
+	top: 0vw;
+	left: -40vh;
+	width: 80vh;
+	height: 20vh;
+}
+
+#theme_previous{
+	position: absolute;	
+    transform: rotate(-90deg);	
+	top: 30vh;
+	left: -42vh; 
+	width: 20vh;
+	height: 20vh;
+}
+
+#theme_playlist{
+	position: absolute;	
+	top: 20vh;
+	left: -22vh; 	
+	width: 44vh;
+	height: 44vh;	
+}
+
+#theme_next{
+    transform: rotate(90deg);	
+	position: absolute;		
+	top: 30vh;
+	left: 22vh; 
+	width: 20vh;
+	height: 20vh;
+}
+
+#level{
+	position: absolute;
+	top: 20vh;
+	left: 40vh;
+	height: 1px;
+	width: 1px;	
+}
+
+#title_level{
+	position: absolute;
+	top: 0vw;
+	left: -40vh;
+	width: 80vh;
+	height: 20vh;
+}
+
+#level_low{
+	position:inherit;
+    top: 32vh;
+	left: -36vh;
+	width: 19vh;
+	height: 19vh;	
+
+}
+
+#level_medium{
+	position:inherit;	
+    top: 28vh;
+	left: -15vh;	
+	width: 27vh;
+	height: 27vh;	
+
+}
+
+#level_high{
+	position:inherit;	
+	top: 21vh;
+	left: 11vh;
+	width: 34vh;
+	height: 34vh;		
+}
+
+
+#splash{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	top: 50vh;
+	left: 50vw;
+}
+
+#title{
+	position: absolute;
+	top: -42vh;
+	left: -30vh;
+	height: 20vh;
+	width: 60vh;
+}
+
+#logo{
+	position: absolute;
+	top: -30vh;
+	left: -30vh;
+	height: 60vh;
+	width: 60vh;
+}
+
+#ondit{
+	position: absolute;
+	top: 24vh;
+	left: -30vh;
+	height: 20vh;
+	width: 60vh;
+}
+
+	
+#boardgame{
+	position:absolute;
+	width: 0vh;
+	height : 0vh;		
+	left: 50vw; 
+    top: 8vh;   	
+}
+
+div.tile {
+	position:inherit;		
+	width: 20vh;
+	height: 20vh;
+	border-radius: 2vh;
+}
+
+div.ln0{ top: 0vh; }
+
+div.ln1{ top: 21vh; }
+
+div.ln2{	top: 42vh; }
+
+div.ln3{ top: 63vh; }
+
+div.cl0{ left: -62vh; }
+
+div.cl1{ left: -41vh; }
+
+div.cl2{ left: -20vh; }
+
+div.cl3{ left: 1vh; }
+
+div.cl4{ left: 22vh; }
+
+div.cl5{ left: 43vh; }	
+
+#congrats_center{
+	display:none;
+	position: absolute;
+	top : 50vh;
+	left: 50vw;
+	height: 1vh;
+	width: 1vh;	
+}
+
+#congrats{
+	position: absolute;
+	border : 5px solid #222222;	
+	background-color: white;
+	top : -20vh;
+	left: -40vh;
+	height: 40vh;
+	width: 80vh;
+	border-radius: 4vh;	
+}
+
+#congrats_bravo{
+	position: absolute;
+	height: 20vh;
+	width: 40vh;
+	top : 0vh;
+	left: 20vh;	
+}
+
+#congrats_listentodeezer{
+	position: absolute;
+	height: 20vh;
+	width: 40vh;
+	top : 14vh;
+	left: 4vh;		
+}
+
+#congrats_deezerlogo{
+	position: absolute;
+	height: 20vh;
+	width: 35vh;
+	top : 22vh;
+	left: 4vh;		
+}
+
+#congrats_replay{
+	position: absolute;
+	height: 14vh;
+	width: 40vh;
+	top : 14vh;
+	left: 46vh;		
+}
+
+#congrats_replaysign{
+	position: absolute;
+	height: 12vh;
+	width: 12vh;
+	top : 25vh;
+	left: 57vh;		
+    transform: rotate(180deg);		
+}
+
+}
+
+@media all and  (orientation : portrait) {
+
+#menu {
+	position: absolute;
+	top:1vh;
+	left: 50vw;
+	height: 8vh;
+}
+
+div.menuitem{
+	position: inherit;
+	top: 0vh;
+	height: 20vw;
+}
+
+#goback {
+	left: -40vw;
+	width: 20vw;
+}
+
+#score {
+    left: -20vw;
+	width: 40vw;
+}
+
+#help {
+    left: 20vw;
+	width: 20vw;
+}
+
+#select {
+    position: absolute;
+	top: 3vh;
+	left: 0vh;
+	height: 1px;
+	width: 1px;	
+}
+
+#title_select {
+	position: absolute;
+	top: 0vh;
+	left: -30vh;
+	width: 60vh;
+	height: 15vh;
+}
+
+#theme {
+	position: absolute;
+	top: 9vh;
+	left: 0vh;
+	height: 1px;
+	width: 1px;	
+}
+
+#title_theme {
+	position: absolute;
+	top: 6vh;
+	left: -30vh;
+	width: 60vh;
+	height: 15vh;
+}
+
+#theme_previous{
+	position: absolute;	
+    transform: rotate(-90deg);	
+	top: 29vh;
+	left: -29vh; 
+	width: 13vh;
+	height: 13vh;
+}
+
+#theme_playlist{
+	position: absolute;	
+	top: 21vh;
+	left: -15vh; 	
+	width: 30vh;
+	height: 30vh;	
+}
+
+#theme_next{
+    transform: rotate(90deg);	
+	position: absolute;		
+	top: 29vh;
+	left: 16vh; 
+	width: 13vh;
+	height: 13vh;	
+}
+
+#level{
+	position: absolute;
+	width: 1px;
+	height: 1px;	
+	top: 62vh;
+	left: 0vh;
+}
+
+#title_level{
+	position: absolute;
+	top: 0vh;
+	width: 60vh;
+	left: -30vh;
+	height: 15vh;
+}
+
+#level_low{
+	position:inherit;		
+	width: 14vh;
+	height: 14vh;	
+	top: 15vh;
+	left: -26vh;
+}
+
+#level_medium{
+	position:inherit;		
+	width: 16vh;
+	height: 16vh;	
+	top: 13vh;
+	left: -9vh;	
+}
+
+#level_high{
+	position:inherit;		
+	width: 20vh;
+	height: 20vh;	
+	top: 11vh;
+	left: 8vh;	
+}
+
+
+#splash{
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	top: 50vh;
+	left: 50vw;
+}
+
+#title{
+	position: absolute;
+	top: -54vw;
+	left: -40vw;
+	height: 20vw;
+	width: 80vw;
+}
+
+#logo{
+	position: absolute;
+	top: -40vw;
+	left: -40vw;
+	height: 80vw;
+	width: 80vw;
+}
+
+#ondit{
+	position: absolute;
+	top: 40vw;
+	left: -40vw;
+	height: 20vw;
+	width: 80vw;
+}
+
+#boardgame{
+	position:absolute;
+	width: 0vh;
+	height : 0vh;		
+	left: 50vw; 
+    top: 22vw;   	
+}
+
+div.tile {
+	position:inherit;		
+	width: 20vw;
+	height: 20vw;
+	border-radius: 1vh;
+}
+ 
+div.ln0{ left: -41vw; }
+
+div.ln1{ left: -20vw; }
+
+div.ln2{	left: 1vw; }
+
+div.ln3{ left: 22vw; }
+
+div.cl0{ top: 0vw; }
+
+div.cl1{ top: 21vw; }
+
+div.cl2{ top: 42vw; }
+
+div.cl3{ top: 63vw; }
+
+div.cl4{ top: 84vw; }
+
+div.cl5{ top: 105vw; }
+
+#congrats_center{
+	display:none;
+	position: absolute;
+	top : 50vh;
+	left: 50vw;
+	height: 1vh;
+	width: 1vh;	
+}
+
+#congrats{
+	position: absolute;
+	border : 5px solid #222222;
+	background-color: white;
+	top : -30vw;
+	left: -40vw;
+	width: 80vw;
+	height: 60vw;
+	border-radius: 4vh;	
+}
+
+#congrats_bravo{
+	position: absolute;
+	height: 30vw;
+	width: 60vw;
+	top : 0vw;
+	left: 10vw;	
+}
+
+#congrats_listentodeezer{
+	position: absolute;
+	height: 20vw;
+	width: 40vw;
+	top : 24vw;
+	left: 5vw;		
+}
+
+#congrats_deezerlogo{
+	position: absolute;
+	height: 20vw;
+	width: 35vw;
+	top : 34vw;
+	left: 6vw;		
+}
+
+#congrats_replay{
+	position: absolute;
+	height: 14vw;
+	width: 40vw;
+	top : 23vw;
+	left: 44vw;		
+}
+
+#congrats_replaysign{
+	position: absolute;
+	height: 15vw;
+	width: 15vw;
+	top : 35vw;
+	left: 52vw;		
+    transform: rotate(180deg);		
+}
+}
