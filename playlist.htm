@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<link rel="icon" type="image/png"  href="favicon.png" />
+<title>&#9834; &#9835; &#9834;  memosong &#9834; &#9835; &#9834; </title>
+<meta name="viewport"  content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+
+<link rel="stylesheet" type="text/css" href="tile.css">
+<script src="plus.js"></script>
+
+
+</head>
+
+<body onload="update_theme(0);">
+
+<div id="center">
+<div id="select">
+	<div id="title_select">
+		<svg viewBox="0 0 80 20" width="100%" height="100%">
+			<defs> <path id="line1" d="M0,12 L 80,12"></path> </defs>			
+			<text x="0" y="0"  font-family="Comic Sans MS, cursive, sans-serif" font-size="13" stroke="#ffffff" stroke-width="0.8"><textPath xlink:href="#line1">Sélectionnez</textPath></text>
+		</svg>	
+	</div>
+</div>
+
+<div id="theme">
+    <div id="title_theme">
+        <svg viewBox="0 0 80 20" width="100%" height="100%">
+            <text x="0" y="0"  font-family="Comic Sans MS, cursive, sans-serif" font-size="12" stroke="#ffffff" stroke-width="0.8"><textPath xlink:href="#line1">&nbsp;&nbsp;&nbsp;une playlist</textPath></text>
+        </svg>	
+    </div>
+    <img id="theme_previous" src="prevnext.svg" onclick="update_theme(-1)"/>
+    <img id="theme_playlist"/>
+    <img id="theme_next" src="prevnext.svg" onclick="update_theme(1)"/>
+</div>   
+
+<div id="level">
+    <div id="title_level">
+        <svg viewBox="0 0 80 20" width="100%" height="100%">
+            <text x="0" y="0"  font-family="Comic Sans MS, cursive, sans-serif" font-size="12" stroke="#ffffff" stroke-width="0.8"><textPath xlink:href="#line1">&nbsp;&nbsp;et un niveau</textPath></text>
+        </svg>	
+    </div>
+    <img id="level_low" src="goldfish.svg" onclick="playmemo('l')"/>
+    <img id="level_medium" src="squirrel.svg" onclick="playmemo('m')"/>  
+    <img id="level_high" src="elephant.svg" onclick="playmemo('h')"/>
+</div>
+
+</div> <!-- id=center -->
+
+<!-- replace USERID by your deezer user id -->
+<script src="https://api.deezer.com/user/USERID/playlists&output=jsonp&callback=user_playlists"></script>
+
+</body>
