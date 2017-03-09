@@ -18,6 +18,11 @@ All you need is a Deezer account with playlists (at least one playlist, each pla
 
 You must set your Deezer user id at the bottom of playlist.htm file.
 
+    <!-- replace USERID by your deezer user id -->
+    <script src="https://api.deezer.com/user/USERID/playlists&output=jsonp&callback=user_playlists"></script>
+
+
+
 ## Thanks to
 
 Thanks to Deezer. I love their app. http://www.deezer.com
