@@ -126,7 +126,7 @@ if(document.URL.split("#").length==2)
 if ( (id != "") && (level != "") )
 {
    var nodeajax = document.createElement("script")
-   nodeajax.src = "http://api.deezer.com/playlist/" + id +"&output=jsonp&callback=onloadplaylist";
+   nodeajax.src = "https://api.deezer.com/playlist/" + id +"&output=jsonp&callback=onloadplaylist";
    document.body.appendChild(nodeajax);   
 }
 
